@@ -1,11 +1,3 @@
-
-	h1 {
-		margin:0 9%;
-		font-size:200%;
-		padding:30px 6%;
-		background-color: white;
-		border: 0.8px solid #D3D3D3
-		}
 	h1::first-letter {
 		font-size:150%;
 		color: #6769D5;
