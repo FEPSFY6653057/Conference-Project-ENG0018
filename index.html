@@ -45,9 +45,9 @@
 		<h2 id="Introduction">Introduction</h2>
 	    <p>
         	What are message queues? It’s as simple as it sounds, queues in which messages are stored. If you look at your phones you will see emails all piled up for you to look at your leisure. That’s what message queue is. Another example and a good way to look at it is when you go to a café. Let’s say a customer wants some coffee, He goes up to the cashier and orders. For this to work effectively, The cashier cannot go to the back and start making coffee and wait for coffee to be made. especially when there are queues behind the customer. Who will take the orders? It’s not efficient at all. For a message queue to work, we need asynchronous processing, allowing the cashier to take the next order without delay. Persistence to ensure the customer’s orders are not missed if a problem occurs.
-			<br>
-			<img src="image/MessageQueueDiagram.jpg" alt="Message Queue Diagram" width="800" height="500">
-			<br>
+			
+			<img src="image/MessageQueueDiagram.jpg" alt="Message Queue Diagram" width="750" height="500" style="margin: 50 0;">
+			
 			Here's a simple diagram of message queue architecture. The cashier registers orders into a queue. The cashier is then free to take as many orders as he wants without any delays, while the coffee maker picks up new orders in batches. Once an order is complete, the coffee maker marks the order as done in the database. After, the customer can come collect the coffee at the counter at their leisure. There is no wasted time between the actions of workers whom we can refer to as ‘broker’.
 			For large companies that need messaging systems, few key factors are considered: Scalability, Flexibility, Reliability, and efficiency.
 		</p>
