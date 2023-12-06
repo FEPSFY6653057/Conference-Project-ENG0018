@@ -54,18 +54,18 @@
 	    <p>
 			<h3>Point-to-Point and Publish-and-Subscribe Messaging Model</h3>
         	There are two styles in which a message can be queued. Point-to-point messaging and Publish-and-subscribe messaging. In a point-to-point model, messages are exchanged through queues, where messages are all individually unique to one consumer. After the consumer has received the message, it will then be discarded from the queue.[5]
-In a publish-and-subscribe messaging, the sender doesn’t need to know the receiver while in point-to-point they do. This is because the message model sends to multiple consumers through a certain topic, which links the sender and consumer. It is the choice of the consumers to subscribe to the topic or not.[5]
-“One important difference between point-to-point and publish/subscribe messaging is that p2p messages are always delivered, regardless of the current connection status of the receiver. Once a message is delivered to a queue, it stays there even if no consumer is currently connected.”[1]
+			In a publish-and-subscribe messaging, the sender doesn’t need to know the receiver while in point-to-point they do. This is because the message model sends to multiple consumers through a certain topic, which links the sender and consumer. It is the choice of the consumers to subscribe to the topic or not.[5]
+			“One important difference between point-to-point and publish/subscribe messaging is that p2p messages are always delivered, regardless of the current connection status of the receiver. Once a message is delivered to a queue, it stays there even if no consumer is currently connected.”[1]
 		</p>
 			<h3>The Evolution of Message Queuing Systems</h3>
         <p>
 			One of the first few systems made was the IBMMQ. It was built for high scalability and reliability, able process high volumes of applications for commercial use. [3]
-Then came the RabbitMQ, an open-sourced system. Unlike the IBMMQ, it supports a variety of protocols such as sorting messages by topic and priority. It is lightweight and simple to use. RabbitMQ works like a messaging middleware. It pushes messages to consumers and deletes them upon acknowledgement, avoiding message pileups. It is able to handle tens of thousands of messages per second.[2][3]
+			Then came the RabbitMQ, an open-sourced system. Unlike the IBMMQ, it supports a variety of protocols such as sorting messages by topic and priority. It is lightweight and simple to use. RabbitMQ works like a messaging middleware. It pushes messages to consumers and deletes them upon acknowledgement, avoiding message pileups. It is able to handle tens of thousands of messages per second.[2][3]
 
-			<img src="image/EvolutionDiagram.gif" alt="Evolution Diagram" width="500" height="800" style="margin: 50 0; position: centered;">
+			<img src="image/EvolutionDiagram.gif" alt="Evolution Diagram" width="300" height="500" style="margin: 50 20%;">
 			
-			Unlike RabbitMQ, Kafka doesn’t support priority queues. It partitions topics into multiple brokers, allowing it to massively scale. Kafka was originally built for massive log processing. It retains messages until expiration and lets consumers pull messages at their own pace. This allows Kafka to  handle millions of data processing every second. Many modern applications integrate Kafka by default, making it a natural fit for most cases. [2]
-Lastly Pulsar, one of the latest message queuing systems, Uses alternative storage methods like bookkeeper and bookies to achieve high scalability and performance.
+			<br>Unlike RabbitMQ, Kafka doesn’t support priority queues. It partitions topics into multiple brokers, allowing it to massively scale. Kafka was originally built for massive log processing. It retains messages until expiration and lets consumers pull messages at their own pace. This allows Kafka to  handle millions of data processing every second. Many modern applications integrate Kafka by default, making it a natural fit for most cases. [2]
+			Lastly Pulsar, one of the latest message queuing systems, Uses alternative storage methods like bookkeeper and bookies to achieve high scalability and performance.
 
         </p>
 		
@@ -77,10 +77,10 @@ Lastly Pulsar, one of the latest message queuing systems, Uses alternative stora
 		<h2 id="References">References</h2>
 	    <p>
         	[1] Mark Richards, Richard Monson-Haefel, David A Chappell(2009)  Java Message Service, 2nd Edition. Available at: https://www.oreilly.com/library/view/java-message-service/9780596802264/ (Accessed: 28 November 2023).
-			[2] BYTEBYTEGO(2023)  How to choose a Message Queue? Kafka vs. RabbitMQ. Available at: https://blog.bytebytego.com/p/how-to-choose-a-message-queue-kafka#:~:text=When%20the%20cashier%20takes%20an,their%20coffee%20at%20the%20counter. (Accessed: 29 November 2023).
-			[3] ByteByteGo(2023)  IBM MQ -> RabbitMQ -> Kafka ->Pulsar, How do message queue architectures evolve? Available at: https://www.linkedin.com/posts/bytebytego_systemdesign-coding-interviewtips-activity-7132625474358272000-rf9I?trk=public_profile_like_view (Accessed: 29 November 2023).
-			[4] Jay Livens(2022)  What is a message queue? How an observability platform eases message queue monitoring. Available at: https://www.dynatrace.com/news/blog/what-is-a-message-queue/ (Accessed: 30 November 2023).
-			[5] Thành Trần (2020)  Point-to-Point and Publish/Subscribe Messaging model. Available at: https://programmingsharing.com/point-to-point-and-publish-subscribe-messaging-model-2efc4d2b6726#:~:text=The%20difference%20between%20the%20point,the%20message%20will%20be%20consumed. (Accessed: 29 November 2023).
+		    <br>[2] BYTEBYTEGO(2023)  How to choose a Message Queue? Kafka vs. RabbitMQ. Available at: https://blog.bytebytego.com/p/how-to-choose-a-message-queue-kafka#:~:text=When%20the%20cashier%20takes%20an,their%20coffee%20at%20the%20counter. (Accessed: 29 November 2023).
+			<br>[3] ByteByteGo(2023)  IBM MQ -> RabbitMQ -> Kafka ->Pulsar, How do message queue architectures evolve? Available at: https://www.linkedin.com/posts/bytebytego_systemdesign-coding-interviewtips-activity-7132625474358272000-rf9I?trk=public_profile_like_view (Accessed: 29 November 2023).
+			<br>[4] Jay Livens(2022)  What is a message queue? How an observability platform eases message queue monitoring. Available at: https://www.dynatrace.com/news/blog/what-is-a-message-queue/ (Accessed: 30 November 2023).
+			<br>[5] Thành Trần (2020)  Point-to-Point and Publish/Subscribe Messaging model. Available at: https://programmingsharing.com/point-to-point-and-publish-subscribe-messaging-model-2efc4d2b6726#:~:text=The%20difference%20between%20the%20point,the%20message%20will%20be%20consumed. (Accessed: 29 November 2023).
 
         </p>
 	</article>
@@ -169,4 +169,4 @@ Lastly Pulsar, one of the latest message queuing systems, Uses alternative stora
 	}
 	
 </style>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
