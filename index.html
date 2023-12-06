@@ -27,8 +27,7 @@
     	<ul style="list-style-type: none; padding-left: 0; margin: 0%;">
           <li><a href="#Abstract">Abstract</a></li>
           <li><a href="#Introduction">Introduction</a></li>
-          <li><a href="#Methods">Methods</a></li>
-          <li><a href="#Discussion">Discussion</a></li>
+          <li><a href="#Analysis/Discussion">Analysis and Discussion</a></li>
           <li><a href="#Conclusion">Conclusion</a></li>
 		  <li><a href="#References">References</a></li>
        	</ul>
@@ -51,15 +50,23 @@
 			Here's a simple diagram of message queue architecture. The cashier registers orders into a queue. The cashier is then free to take as many orders as he wants without any delays, while the coffee maker picks up new orders in batches. Once an order is complete, the coffee maker marks the order as done in the database. After, the customer can come collect the coffee at the counter at their leisure. There is no wasted time between the actions of workers whom we can refer to as ‘broker’.
 			For large companies that need messaging systems, few key factors are considered: Scalability, Flexibility, Reliability, and efficiency.
 		</p>
-		<h2 id="Methods">Methods</h2>
+		<h2 id="Analysis/Discussion">Analysis & Discussion</h2>
 	    <p>
-        	Generative AI, incorporating the use of large language model-based chatbots such as ChatGPT and 
-			image generative technology such as DALL-E 2, is resurrecting the dead using digital traces left behind. 
-        </p>
-		
-		<h2 id="Discussion">Discussion</h2>
-	    <p>
-        	It was clear that the market needed a message queue product that can fully implement the AMQP protocol. Rabbit Technologies was co-founded by Alexis and Matthias in 2007 [17]. In the same year, the company launched RabbitMQ, the first message queue product that fully implements AMQP protocol. In 2010, the company was acquired by VMware [18]. RabbitMQ is developed in Erlang programming language with exceptional performance and low latency in the microsecond range. Because of its full support for AMQP, it is more open and able to support more applications for integrated access than commercial products such as IBM MQ and ActiveMQ which implemented JMS. In addition, compared with other contemporary products of AMQP implementation such as Apache Qpid [19], RabbitMQ’s multi-language client and technical documents are more standardized and sounder, and its open source community is more active [20][21]. This made RabbitMQ increasingly an ideal choice for message exchange in small, medium, and even large enterprises. In fact, RabbitMQ is still one of the most successful open source message queues in the world to this day. 
+			<h3>Point-to-Point and Publish-and-Subscribe Messaging Model</h3>
+        	There are two styles in which a message can be queued. Point-to-point messaging and Publish-and-subscribe messaging. In a point-to-point model, messages are exchanged through queues, where messages are all individually unique to one consumer. After the consumer has received the message, it will then be discarded from the queue.[5]
+In a publish-and-subscribe messaging, the sender doesn’t need to know the receiver while in point-to-point they do. This is because the message model sends to multiple consumers through a certain topic, which links the sender and consumer. It is the choice of the consumers to subscribe to the topic or not.[5]
+“One important difference between point-to-point and publish/subscribe messaging is that p2p messages are always delivered, regardless of the current connection status of the receiver. Once a message is delivered to a queue, it stays there even if no consumer is currently connected.”[1]
+		</p>
+			<h3>The Evolution of Message Queuing Systems</h3>
+        <p>
+			One of the first few systems made was the IBMMQ. It was built for high scalability and reliability, able process high volumes of applications for commercial use. [3]
+Then came the RabbitMQ, an open-sourced system. Unlike the IBMMQ, it supports a variety of protocols such as sorting messages by topic and priority. It is lightweight and simple to use. RabbitMQ works like a messaging middleware. It pushes messages to consumers and deletes them upon acknowledgement, avoiding message pileups. It is able to handle tens of thousands of messages per second.[2][3]
+
+			<img src="image/EvolutionDiagram.jpg" alt="Evolution Diagram" width="500" height="800" style="margin: 50 0; position: centered;">
+			
+			Unlike RabbitMQ, Kafka doesn’t support priority queues. It partitions topics into multiple brokers, allowing it to massively scale. Kafka was originally built for massive log processing. It retains messages until expiration and lets consumers pull messages at their own pace. This allows Kafka to  handle millions of data processing every second. Many modern applications integrate Kafka by default, making it a natural fit for most cases. [2]
+Lastly Pulsar, one of the latest message queuing systems, Uses alternative storage methods like bookkeeper and bookies to achieve high scalability and performance.
+
         </p>
 		
 		<h2 id="Conclusion">Conclusion</h2>
